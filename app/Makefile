@@ -27,6 +27,7 @@ watch:
 		onchange 'resource/img/**' -- make build-images
 
 build:
+		npm install
 		make build-css
 		make build-js
 		make build-images
