@@ -1,0 +1,69 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import argparse
+import logging
+import os
+import subprocess
+import sys
+
+sys.path.append(os.path.join(sys.path[0], 'lib'))
+
+# Override the default verbosity for this command. VERBOSITY must be one of:
+# debug, info, warning, error, critical, none
+VERBOSITY = 'warning'
+
+
+def shellcmd(cmd):
+    return subprocess.check_call(
+            cmd,
+            stderr=subprocess.STDOUT,
+            shell=True)
+
+
+def get_current_revision():
+    return subprocess.check_output(
+            'git rev-parse --short HEAD',
+            stderr=subprocess.STDOUT,
+            shell=True).rstrip()
+
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+handler = logging.StreamHandler(sys.stdout)
+handler.setFormatter(logging.Formatter(
+    "%(levelname)s :: %(message)s"))
+logger.addHandler(handler)
+
+
+parser = argparse.ArgumentParser(
+        description='Manage release process to dev and prod environemnt')
+
+parser.add_argument(
+    'app_id',
+    help='Application ID')
+
+parser.add_argument(
+    '--production',
+    help='Release to production',
+    action='store_true',
+    )
+
+args = parser.parse_args()
+
+APP_ID = args.app_id
+
+if args.production:
+    DEST_APP_ID = APP_ID
+else:
+    DEST_APP_ID = APP_ID + '-dev'
+
+REVISION = get_current_revision()
+
+logger.info('Generating buildinfo')
+f = open('buildinfo.py', 'w')
+f.write("APP_VERSION = '{}'".format(REVISION))
+f.close()
+
+logger.info('Running GAE deployer')
+shellcmd('gcloud app deploy --project {} --verbosity={}'.format(
+  DEST_APP_ID, VERBOSITY))
