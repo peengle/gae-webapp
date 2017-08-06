@@ -1,0 +1,7 @@
+# This requirements file lists all third-party dependencies for this project.
+#
+# Run 'make build' to install these dependencies in `lib/` subdirectory.
+#
+# Note: The `lib` directory is added to `sys.path` by `appengine_config.py`.
+GoogleAppEngineCloudStorageClient
+git+https://github.com/gae-toolbox/spiner.git#egg=spiner

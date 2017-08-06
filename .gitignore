@@ -1,0 +1,9 @@
+*.pyc
+.coverage
+.coverage_html
+buildinfo.py
+lib/*
+local.yaml
+node_modules
+npm-debug.log
+dist

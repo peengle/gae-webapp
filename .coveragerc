@@ -1,0 +1,8 @@
+[run]
+source = app
+
+[report]
+ignore_errors = True
+
+[html]
+directory = .coverage_html

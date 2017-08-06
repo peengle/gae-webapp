@@ -1,0 +1,10 @@
+// Common styles
+@import 'mixins';
+@import 'variables';
+@import '../../node_modules/normalize.css/normalize';
+
+// Layout style
+@import '../../resources/layouts/default/style';
+
+// Page styles
+@import '../../pages/index/style';

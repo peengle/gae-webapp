@@ -1,0 +1,57 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+builtins:
+- remote_api: on
+- deferred: on
+- appstats: on
+
+libraries:
+- name: jinja2
+  version: latest
+- name: ssl
+  version: latest
+- name: webapp2
+  version: latest
+
+handlers:
+- url: /_admin/.*
+  script: admin.webapp
+  login: admin
+  secure: always
+
+- url: /_upload
+  script: upload.webapp
+  secure: always
+
+- url: /dist
+  static_dir: dist
+  application_readable: false
+
+- url: .*
+  script: app.webapp
+
+skip_files:
+- ^(.*/)?#.*#$          # Emacs backup files
+- ^(.*/)?.*~$           # Files with names that ends with ~
+- ^(.*/)?\.bak$         # Files with names that ends with .bak
+- ^(.*/)?\.old$         # Files with names that ends with .old
+- ^(.*/)?.*\.py[co]$    # Compiled python
+- ^(.*/)?.*/RCS/.*$     # RCS revision control
+- ^(.*/)?\..*$          # Unix hidden files with names beginning with a dot (.)
+- ^(.*/)?\.md$          # Markdown files *.md
+- ^(.*/)?\.less$        # Less source
+- ^(.*/)?\.scss$        # Sass source
+- ^lib/.*-info$         # Sass source
+- bin                   # Directory bin
+- lib/mock.*            # 3rd party mocks
+- node_modules          # node dependecies
+- ^.*node_modules(/.*)? # fix: don't watch files in node_moduels directory
+
+# ENV variables could be overwriten in dev.yaml or local.yaml
+env_variables:
+  DEBUG: '0'
+  APPSTATS: 'enabled'
+  ENVIRONMENT: 'production'
+  GCS_URL: 'https://storage.googleapis.com{path}'

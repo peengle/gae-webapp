@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "imagemin-cli": "^2.1.0",
+    "node-sass": "^3.7.0",
+    "npm-run-all": "^2.1.1",
+    "onchange": "^2.4.0",
+    "postcss-cli": "^2.5.2",
+    "stylelint": "^6.5.1",
+    "stylelint-config-standard": "^8.0.0",
+    "uglifyjs-folder": "^1"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "normalize.css": "^4.1.1"
+  }
+}

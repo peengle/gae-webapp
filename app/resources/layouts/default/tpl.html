@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ lang or 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/dist/app/style.css">
+  <!--[if lt IE 9]>
+    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body class="page-{{ pageName or 'default' }}">
+{% block content %}{% endblock %}
+<script src="/dist/app/vendor.js"></script>
+<script src="/dist/app/script.js"></script>
+</body>
+</html>
