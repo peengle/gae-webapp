@@ -4,4 +4,4 @@
 #
 # Note: The `lib` directory is added to `sys.path` by `appengine_config.py`.
 GoogleAppEngineCloudStorageClient
-git+https://github.com/gae-toolbox/spiner.git#egg=spiner
+git+https://github.com/romannowicki/spiner.git#egg=spiner
