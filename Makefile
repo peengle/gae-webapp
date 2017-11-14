@@ -1,10 +1,10 @@
-APP_ID=gaeapp
-SDK_PATH=~/google-cloud-sdk
+APP_ID={{APPID}}
+PORT={{PORT}}
+ADMIN_PORT={{ADMIN_PORT}}
+SDK_PATH={{GOOGLE_SKD_PATH}}
 TEST_PATH=tests
 STORAGE_PATH=.storage
 HOST=localhost
-PORT=9990
-ADMIN_PORT=9991
 
 
 help:
@@ -29,11 +29,12 @@ clean-pyc:
 		find . -name "*.pyc" -type f -delete
 
 run:
-		dev_appserver.py . -A $(APP_ID) --storage_path=$(STORAGE_PATH) --port $(PORT) --admin_port $(ADMIN_PORT) --host $(HOST)
+		dev_appserver.py . -A $(APP_ID) --storage_path=$(STORAGE_PATH) --port $(PORT) --admin_port $(ADMIN_PORT) --host $(HOST) &
+		make -C www watch
 
 build:
 		make install-pip-requirements
-		make -C app build
+		make -C www build
 
 install-pip-requirements:
 		pip install -r requirements.txt -t lib --upgrade

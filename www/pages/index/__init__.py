@@ -6,5 +6,5 @@ from webapp2 import RequestHandler
 
 class Handler(RequestHandler):
     def get(self):
-        template = view.get_template('app/pages/index/tpl.html')
+        template = view.get_template('www/pages/index/tpl.html')
         self.response.write(template.render())

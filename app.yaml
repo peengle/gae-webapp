@@ -30,7 +30,7 @@ handlers:
   application_readable: false
 
 - url: .*
-  script: app.webapp
+  script: www.webapp
 
 skip_files:
 - ^(.*/)?#.*#$          # Emacs backup files
