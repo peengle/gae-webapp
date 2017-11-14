@@ -11,6 +11,6 @@ ROUTES = [
             )
         ]
 
-webapp = webapp2.WSGIApplication(
+app = webapp2.WSGIApplication(
     ROUTES,
     debug=spiner.config.is_debug_mode())

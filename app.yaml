@@ -29,8 +29,11 @@ handlers:
   static_dir: dist
   application_readable: false
 
+- url: /api/.*
+  script: api.app
+
 - url: .*
-  script: www.webapp
+  script: www.app
 
 skip_files:
 - ^(.*/)?#.*#$          # Emacs backup files
