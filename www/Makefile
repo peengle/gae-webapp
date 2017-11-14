@@ -17,8 +17,8 @@ help:
 		@echo '        Build images files from resources'
 
 clean:
-		find ../dist/app -name "*.js" -delete
-		find ../dist/app -name "*.css" -delete
+		find ../dist/www -name "*.js" -delete
+		find ../dist/www -name "*.css" -delete
 
 watch:
 		onchange 'pages/**/**/*.scss' -- make build-css &
@@ -35,12 +35,12 @@ build:
 build-css:
 		stylelint 'resources/**/**/*.scss' --syntax scss
 		stylelint 'pages/**/**/*.scss' --syntax scss
-		node-sass --output-style compressed -o ../dist/app resources/scss
-		postcss -u autoprefixer -r ../dist/app/*.css
+		node-sass --output-style compressed -o ../dist/www resources/scss
+		postcss -u autoprefixer -r ../dist/www/*.css
 
 build-js:
-		uglifyjs-folder pages -o ../dist/app/script.js
-		uglifyjs node_modules/jquery/dist/jquery.min.js -o ../dist/app/vendor.js
+		uglifyjs-folder pages -o ../dist/www/script.js
+		uglifyjs node_modules/jquery/dist/jquery.min.js -o ../dist/www/vendor.js
 
 build-images:
 		imagemin resources/img resources/img/** ../dist/app -p
