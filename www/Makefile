@@ -1,5 +1,6 @@
 SHELL := /bin/bash
 PATH := ./node_modules/.bin:$(PATH)
+NAME=www
 
 help:
 		@echo "OPTIONS:"
@@ -22,9 +23,9 @@ clean:
 
 watch:
 		onchange 'pages/**/**/*.scss' -- make build-css &
-		onchange 'resource/**/**/*.scss' -- make build-css &
+		onchange 'resources/**/**/*.scss' -- make build-css &
 		onchange 'pages/**/**/*.js' -- make build-js &
-		onchange 'resource/img/**' -- make build-images
+		onchange 'resources/img/**' -- make build-images
 
 build:
 		npm install
@@ -35,12 +36,12 @@ build:
 build-css:
 		stylelint 'resources/**/**/*.scss' --syntax scss
 		stylelint 'pages/**/**/*.scss' --syntax scss
-		node-sass --output-style compressed -o ../dist/www resources/scss
-		postcss -u autoprefixer -r ../dist/www/*.css
+		node-sass --output-style compressed -o ../dist/$(NAME) resources/scss
+		postcss -u autoprefixer -r ../dist/$(NAME)/*.css
 
 build-js:
-		uglifyjs-folder pages -o ../dist/www/script.js
-		uglifyjs node_modules/jquery/dist/jquery.min.js -o ../dist/www/vendor.js
+		uglifyjs-folder pages -o ../dist/$(NAME)/script.js
+		uglifyjs node_modules/jquery/dist/jquery.min.js -o ../dist/$(NAME)/vendor.js
 
 build-images:
-		imagemin resources/img resources/img/** ../dist/app -p
+		imagemin resources/img resources/img/** ../dist/$(NAME) -p
