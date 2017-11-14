@@ -23,3 +23,44 @@ git commit -m 'Initial project structure'
 make build
 make run
 ```
+
+The project strucutre is very simple to extend, like you can see on below
+folder structure every www page, api endpoint is kept in separate namespace
+
+```
+.
+├── Makefile
+├── README.md
+├── api
+│   └── __init__.py
+├── app.yaml
+├── appengine_config.py
+├── dev.yaml
+├── local.yaml.example
+├── release
+├── requirements.txt
+├── unittest
+├── upload
+│   └── __init__.py
+└── www
+    ├── Makefile
+    ├── __init__.py
+    ├── package.json
+    ├── pages
+    │   ├── __init__.py
+    │   └── index
+    │       ├── __init__.py
+    │       ├── style.scss
+    │       └── tpl.html
+    └── resources
+        ├── img
+        │   └── logo.svg
+        ├── layouts
+        │   └── default
+        │       ├── style.scss
+        │       └── tpl.html
+        └── scss
+            ├── _mixins.scss
+            ├── _variables.scss
+            └── style.scss
+```
