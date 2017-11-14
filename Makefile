@@ -1,7 +1,8 @@
-APP_ID={{APPID}}
-PORT={{PORT}}
-ADMIN_PORT={{ADMIN_PORT}}
-SDK_PATH={{GOOGLE_SKD_PATH}}
+# Overwrite below const when needed
+APP_ID=helloapp
+SDK_PATH=~/google-cloud-sdk
+PORT=8880
+ADMIN_PORT=8881
 TEST_PATH=tests
 STORAGE_PATH=.storage
 HOST=localhost
