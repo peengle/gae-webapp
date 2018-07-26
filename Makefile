@@ -38,7 +38,7 @@ build:
 		make -C www build
 
 install-pip-requirements:
-		pip install -r requirements.txt -t lib --upgrade
+		./bin/pipinstall
 
 release-dev:
 		./bin/release $(APP_ID)
