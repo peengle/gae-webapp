@@ -12,9 +12,15 @@ with some helpful commands and patterns for creating separate config for
 production, staging and local environments
 
 To create new app just clone this repository open Makefile and change 
-APP_ID, SDK_PATH to your own and run:
+`APP_ID`, `SDK_PATH` to your own and run:
 
 ```
+$ ./init-new-project
+```
+
+which will do following steps:
+
+````
 rm .git
 git init
 git commit --allow-empty -m 'Initial commit'
@@ -23,9 +29,10 @@ git commit -m 'Initial project structure'
 cp local.yaml.example local.yaml
 make build
 make run
+rm init-new-project
 ```
 
-The project strucutre is very simple to extend, like you can see on below
+The project structure is very simple to extend, like you can see on below
 folder structure every www page, api endpoint is kept in separate namespace
 
 ```
