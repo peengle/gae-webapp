@@ -15,7 +15,7 @@ To create new app just clone this repository open Makefile and change
 `APP_ID`, `SDK_PATH` to your own and run:
 
 ```
-$ ./init-new-project
+$ ./bin/init-new-project
 ```
 
 which will do following steps:
@@ -29,7 +29,6 @@ git commit -m 'Initial project structure'
 cp local.yaml.example local.yaml
 make build
 make run
-rm init-new-project
 ```
 
 The project structure is very simple to extend, like you can see on below
