@@ -20,7 +20,7 @@ $ ./bin/init-new-project
 
 which will do following steps:
 
-````
+```
 rm .git
 git init
 git commit --allow-empty -m 'Initial commit'
