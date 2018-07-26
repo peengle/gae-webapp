@@ -41,7 +41,7 @@ install-pip-requirements:
 		pip install -r requirements.txt -t lib --upgrade
 
 release-dev:
-		./release $(APP_ID)
+		./bin/release $(APP_ID)
 
 release-prod:
-		./release $(APP_ID) --prod
+		./bin/release $(APP_ID) --prod
