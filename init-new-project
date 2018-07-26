@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-rm .git
+rm -rf .git
 git init
 git commit --allow-empty -m 'Initial commit'
 git add .
