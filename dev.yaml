@@ -1,3 +1,0 @@
-env_variables:
-  DEBUG: '1'
-  ENVIRONMENT: 'development'
