@@ -1,5 +1,5 @@
 # Overwrite below const when needed
-APP_ID=helloapp
+APP_ID=webapp
 SDK_PATH=~/google-cloud-sdk
 PORT=8880
 ADMIN_PORT=8881
