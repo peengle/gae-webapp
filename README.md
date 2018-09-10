@@ -26,7 +26,6 @@ git init
 git commit --allow-empty -m 'Initial commit'
 git add .
 git commit -m 'Initial project structure'
-cp local.yaml.example local.yaml
 make build
 make run
 ```
