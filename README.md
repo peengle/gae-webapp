@@ -15,6 +15,8 @@ To create new app just clone this repository open Makefile and change
 `APP_ID`, `SDK_PATH` to your own and run:
 
 ```
+$ git clone git@github.com:romannowicki/gae-skeleton.git <newproject>
+$ cd <newproject>
 $ ./bin/init-new-project
 ```
 
