@@ -2,7 +2,7 @@
 <html lang="{{ lang or 'en' }}">
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Page Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/dist/www/style.css">
   <!--[if lt IE 9]>
@@ -10,8 +10,32 @@
   <![endif]-->
 </head>
 <body class="page-{{ pageName or 'default' }}">
-{% block content %}{% endblock %}
-<script src="/dist/www/vendor.js"></script>
-<script src="/dist/www/script.js"></script>
+  <!-- Note -->
+  <div style="background:yellow;padding:5px">
+    <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>My Website</h1>
+    <p>With a <b>flexible</b> layout.</p>
+  </div>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+  </div>
+
+  {% block content %}{% endblock %}
+
+  <!-- Footer -->
+  <div class="footer">
+    <h2>Footer</h2>
+  </div>
+  <script src="/dist/www/vendor.js"></script>
+  <script src="/dist/www/script.js"></script>
 </body>
 </html>
