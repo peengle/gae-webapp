@@ -1,0 +1,11 @@
+// Common styles
+@import 'mixins';
+@import 'variables';
+@import '../../../node_modules/normalize.css/normalize';
+@import '../../../node_modules/hamburgers/dist/hamburgers';
+
+// Layout style
+@import 'styles';
+
+// Page styles
+@import '../../../pages/index/styles';

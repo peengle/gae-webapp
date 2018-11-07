@@ -1,5 +1,6 @@
 SHELL := /bin/bash
 PATH := ./node_modules/.bin:$(PATH)
+LAYOUT=default
 NAME=www
 
 help:
@@ -36,7 +37,7 @@ build:
 build-css:
 		stylelint 'resources/**/**/*.scss' --syntax scss
 		stylelint 'pages/**/**/*.scss' --syntax scss
-		node-sass --output-style compressed -o ../dist/$(NAME) resources/scss
+		node-sass --output-style compressed -o ../dist/$(NAME) resources/layouts/$(LAYOUT)
 		postcss -u autoprefixer -r ../dist/$(NAME)/*.css
 
 build-js:
