@@ -32,19 +32,78 @@ h1 {
 /* Style the top navigation bar */
 .navbar {
   display: flex;
-  background-color: #333;
+  justify-content: space-between;
+  padding-bottom: 0;
+  height: 70px;
+  align-items: center;
+  position: fixed;
+  width: 100%;
 
-  /* Style the navigation bar links */
-  a {
-    color: white;
-    padding: 14px 20px;
+  &--bg {
+    background-color: $navbar-bgcolor;
+  }
+
+  .main-nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+
+  &__toggle {
+    display: none;
+  }
+
+  .nav-links {
     text-decoration: none;
-    text-align: center;
+    color: black;
+    padding: 1em;
 
-    /* Change color on hover */
     &:hover {
-      background-color: #ddd;
-      color: black;
+      background-color: gray;
+    }
+  }
+
+  .logo {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    margin-top: 0;
+    margin-left: 20px;
+  }
+
+  @include mobile-only {
+    flex-direction: row;
+    display: block;
+
+    .logo {
+      margin-top: 20px;
+    }
+
+    .main-nav {
+      display: none;
+      width: 100%;
+      height: auto;
+      padding: 0;
+      padding-bottom: 1em;
+      background-color: $navbar-bgcolor;
+
+      li {
+        padding: 1em;
+      }
+    }
+
+    &__toggle {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      cursor: pointer;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 20px;
     }
   }
 }
@@ -53,6 +112,10 @@ h1 {
 .row {
   display: flex;
   flex-wrap: wrap;
+
+  @include mobile-only {
+    flex-direction: column;
+  }
 }
 
 /* Create two unequal columns that sits next to each other */
@@ -83,12 +146,4 @@ h1 {
   padding: 20px;
   text-align: center;
   background: #ddd;
-}
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row,
-  .navbar {
-    flex-direction: column;
-  }
 }

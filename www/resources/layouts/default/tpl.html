@@ -10,23 +10,40 @@
   <![endif]-->
 </head>
 <body class="page-{{ pageName or 'default' }}">
-  <!-- Note -->
-  <div style="background:yellow;padding:5px">
-    <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
-  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+
+    <button class="hamburger hamburger--3dx navbar__toggle is-active" id="js-navbar-toogle" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <a href="#" class="logo">LOGO</a>
+    <ul class="main-nav" id="js-menu">
+        <li>
+            <a href="#" class="nav-links">Home</a>
+        </li>
+        <li>
+            <a href="#" class="nav-links">Products</a>
+        </li>
+        <li>
+            <a href="#" class="nav-links">About Us</a>
+        </li>
+        <li>
+            <a href="#" class="nav-links">Contact Us</a>
+        </li>
+        <li>
+            <a href="#" class="nav-links">Blog</a>
+        </li>
+    </ul>
+    </nav>
+
 
   <!-- Header -->
   <div class="header">
     <h1>My Website</h1>
     <p>With a <b>flexible</b> layout.</p>
-  </div>
-
-  <!-- Navigation Bar -->
-  <div class="navbar">
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-    <a href="#">Link</a>
   </div>
 
   {% block content %}{% endblock %}

@@ -8,7 +8,8 @@
     "postcss-cli": "^2",
     "stylelint": "^6",
     "stylelint-config-standard": "^8",
-    "uglifyjs-folder": "^1"
+    "uglifyjs-folder": "^1",
+    "hamburgers": "^1"
   },
   "dependencies": {
     "jquery": "^3",
