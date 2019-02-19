@@ -38,35 +38,35 @@ folder structure every www page, api endpoint is kept in separate namespace
 ├── Makefile
 ├── README.md
 ├── api
-│   └── __init__.py
+│   ├── __init__.py
+│   └── v1
+│       └── __init__.py
 ├── app.yaml
 ├── appengine_config.py
-├── dev.yaml
-├── local.yaml.example
-├── release
+├── env_variables
+│   ├── __init__.py
+│   ├── local.py
+│   └── local.py.example
 ├── requirements.txt
-├── unittest
-├── upload
-│   └── __init__.py
 └── www
     ├── Makefile
     ├── __init__.py
     ├── package.json
     ├── pages
     │   ├── __init__.py
-    │   └── index
-    │       ├── __init__.py
-    │       ├── style.scss
-    │       └── tpl.html
+    │   ├── index
+    │   │   ├── __init__.py
+    │   │   ├── script.js
+    │   │   ├── styles.scss
+    │   │   └── tpl.html
+    │   └── script.js
     └── resources
         ├── img
-        │   └── logo.svg
-        ├── layouts
-        │   └── default
-        │       ├── style.scss
-        │       └── tpl.html
-        └── scss
-            ├── _mixins.scss
-            ├── _variables.scss
-            └── style.scss
+        └── layouts
+            └── default
+                ├── _mixins.scss
+                ├── _styles.scss
+                ├── _variables.scss
+                ├── init.scss
+                └── tpl.html
 ```

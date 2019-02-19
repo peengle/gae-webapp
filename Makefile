@@ -33,6 +33,9 @@ run:
 		dev_appserver.py . -A $(APP_ID) --storage_path=$(STORAGE_PATH) --port $(PORT) --admin_port $(ADMIN_PORT) --host $(HOST) &
 		make -C www watch
 
+tree:
+		tree -I 'node_modules|lib|dist|bin|upload|unittest|*.png|*.svg|*.pyc|*.lock'
+
 build:
 		make install-pip-requirements
 		make -C www build
