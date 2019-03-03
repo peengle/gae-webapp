@@ -9,7 +9,7 @@
     "stylelint": "^6",
     "stylelint-config-standard": "^8",
     "uglifyjs-folder": "^1",
-    "hamburgers": "^1"
+    "slideout-mod": "^1"
   },
   "dependencies": {
     "jquery": "^3",

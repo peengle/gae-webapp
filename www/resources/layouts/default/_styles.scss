@@ -19,6 +19,10 @@ body {
 h1 {
   font-family: 'Lato', sans-serif;
   font-size: 4em;
+
+  @include mobile-only {
+    font-size: 2em;
+  }
 }
 
 /* Header/logo Title */
@@ -27,85 +31,6 @@ h1 {
   text-align: center;
   background: #1abc9c;
   color: white;
-}
-
-/* Style the top navigation bar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 0;
-  height: 70px;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-
-  &--bg {
-    background-color: $navbar-bgcolor;
-  }
-
-  .main-nav {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 0;
-    height: 70px;
-    align-items: center;
-  }
-
-  &__toggle {
-    display: none;
-  }
-
-  .nav-links {
-    text-decoration: none;
-    color: black;
-    padding: 1em;
-
-    &:hover {
-      background-color: gray;
-    }
-  }
-
-  .logo {
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-    font-size: 22px;
-    margin-top: 0;
-    margin-left: 20px;
-  }
-
-  @include mobile-only {
-    flex-direction: row;
-    display: block;
-
-    .logo {
-      margin-top: 20px;
-    }
-
-    .main-nav {
-      display: none;
-      width: 100%;
-      height: auto;
-      padding: 0;
-      padding-bottom: 1em;
-      background-color: $navbar-bgcolor;
-
-      li {
-        padding: 1em;
-      }
-    }
-
-    &__toggle {
-      display: block;
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      cursor: pointer;
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 20px;
-    }
-  }
 }
 
 /* Column container */
@@ -146,4 +71,8 @@ h1 {
   padding: 20px;
   text-align: center;
   background: #ddd;
+}
+
+.btn-hamburger {
+  display: none;
 }

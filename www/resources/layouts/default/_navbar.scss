@@ -1,0 +1,44 @@
+nav {
+  padding: 0;
+
+  header {
+    vertical-align: middle;
+
+    @include mobile-only {
+      background: $nav-header-bg;
+      padding: 0.5em;
+      text-align: center;
+    }
+  }
+
+  ol {
+    list-style-type: none;
+    padding-inline-start: 0;
+
+    li {
+      padding: 1em;
+    }
+  }
+
+  @include notmobile-only {
+    background: $nav-header-bg;
+    padding: 1em;
+
+    header {
+      display: inline-block;
+    }
+
+    ol {
+      display: inline-block;
+      margin-left: 2em;
+
+      li {
+        display: inline;
+      }
+    }
+
+    .menuitems {
+      display: flex;
+    }
+  }
+}

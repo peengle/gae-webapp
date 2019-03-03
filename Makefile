@@ -38,6 +38,9 @@ tree:
 
 build:
 		make install-pip-requirements
+		make build-www
+
+build-www:
 		make -C www build
 
 install-pip-requirements:

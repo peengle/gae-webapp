@@ -12,46 +12,33 @@
 <body class="page-{{ pageName or 'default' }}">
 
   <!-- Navigation Bar -->
-  <nav class="navbar">
-
-    <button class="hamburger hamburger--3dx navbar__toggle is-active" id="js-navbar-toogle" type="button">
-      <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-      </span>
-    </button>
-    <a href="#" class="logo">LOGO</a>
-    <ul class="main-nav" id="js-menu">
-        <li>
-            <a href="#" class="nav-links">Home</a>
-        </li>
-        <li>
-            <a href="#" class="nav-links">Products</a>
-        </li>
-        <li>
-            <a href="#" class="nav-links">About Us</a>
-        </li>
-        <li>
-            <a href="#" class="nav-links">Contact Us</a>
-        </li>
-        <li>
-            <a href="#" class="nav-links">Blog</a>
-        </li>
-    </ul>
-    </nav>
+  <nav id="menu">
+    <header>
+      <img src="/dist/www/logo.png" width="100" alt="gae-webapp"/>
+    </header>
+    <ol>
+      <li>Menu 1</li>
+      <li>Menu 2</li>
+      <li>Menu 3</li>
+    </ol>
+  </nav>
 
 
-  <!-- Header -->
-  <div class="header">
-    <h1>My Website</h1>
-    <p>With a <b>flexible</b> layout.</p>
-  </div>
+  <main id="panel">
+    <!-- Header -->
+    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iMzJweCIgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHdpZHRoPSIzMnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNNCwxMGgyNGMxLjEwNCwwLDItMC44OTYsMi0ycy0wLjg5Ni0yLTItMkg0QzIuODk2LDYsMiw2Ljg5NiwyLDhTMi44OTYsMTAsNCwxMHogTTI4LDE0SDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDIgIHMwLjg5NiwyLDIsMmgyNGMxLjEwNCwwLDItMC44OTYsMi0yUzI5LjEwNCwxNCwyOCwxNHogTTI4LDIySDRjLTEuMTA0LDAtMiwwLjg5Ni0yLDJzMC44OTYsMiwyLDJoMjRjMS4xMDQsMCwyLTAuODk2LDItMiAgUzI5LjEwNCwyMiwyOCwyMnoiLz48L3N2Zz4=" class="btn-hamburger toggle-button"/>
+    <div class="header">
+      <h1>Responsive Website</h1>
+      <p>using <b><a href="https://www.w3schools.com/css/css3_flexbox.asp">Flexbox</a></b></p>
+    </div>
 
-  {% block content %}{% endblock %}
+    {% block content %}{% endblock %}
 
-  <!-- Footer -->
-  <div class="footer">
-    <h2>Footer</h2>
-  </div>
+    <!-- Footer -->
+    <div class="footer">
+      <h2>Footer</h2>
+    </div>
+  </main>
   <script src="/dist/www/vendor.js"></script>
   <script src="/dist/www/script.js"></script>
 </body>

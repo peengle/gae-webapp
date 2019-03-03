@@ -42,7 +42,9 @@ build-css:
 
 build-js:
 		uglifyjs-folder pages -o ../dist/$(NAME)/script.js
-		uglifyjs node_modules/jquery/dist/jquery.min.js -o ../dist/$(NAME)/vendor.js
+		uglifyjs node_modules/jquery/dist/jquery.min.js \
+						 node_modules/slideout-mod/dist/slideout.min.js \
+			       -o ../dist/$(NAME)/vendor.js
 
 build-images:
 		imagemin resources/img resources/img/** ../dist/$(NAME) -p

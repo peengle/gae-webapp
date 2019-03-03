@@ -1,18 +1,17 @@
 console.log('pages.main.script.loaded');
 
 $(function() {
-  $('#js-navbar-toogle').on('click', function() {
-    $('#js-menu').toggle();
+  var slideout = new Slideout({
+    'panel': document.getElementById('panel'),
+    'menu': document.getElementById('menu'),
+    'padding': 256,
+    'tolerance': 70,
+    'side': 'right'
   });
-  navbar_state();
-  $(window).scroll(navbar_state)
+
+  // Hamburger Menu Toggle button
+  $('.toggle-button').on('click', function() {
+      slideout.toggle();
+  });
 });
 
-function navbar_state() {
-  var scroll = $(window).scrollTop();
-  if (scroll > 50) {
-    $('.navbar').addClass('navbar--bg');
-  } else {
-    $('.navbar').removeClass('navbar--bg');
-  }
-}
