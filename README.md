@@ -1,13 +1,14 @@
 # WEBAPP
 
-Simple webapp application skeleton design for [Google App Engine](https://cloud.google.com/appengine/) environment.
+webapp application skeleton design for [Google App Engine](https://cloud.google.com/appengine/) environment.
 
-The skeleton project is proposing structure that can be use to serve: website,
-rest api, cms or all of them at once from single project. 
+The skeleton project is proposing structure that can be use to serve: 
+- website,
+- rest api,
+- admin/cms
+- or all of them at once from single project. 
+
 It has been created as playground for [spiner](https://github.com/romannowicki/spiner) project.
-
-It comes as well with some helpful commands and patterns for creating 
-separate config for production, staging and local environments
 
 To create new webapp just clone this repository open Makefile and change 
 `APP_ID`, `SDK_PATH` to your own and run:
@@ -70,3 +71,5 @@ folder structure every www page, api endpoint is kept in separate namespace
                 ├── init.scss
                 └── tpl.html
 ```
+
+![Desktop and Mobile View](.md/gae-webapp-view.jpg)
