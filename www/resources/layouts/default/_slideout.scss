@@ -1,4 +1,8 @@
 @include mobile-only {
+  main {
+    touch-action: none;
+  }
+
   .slideout-menu {
     position: fixed;
     top: 0;
