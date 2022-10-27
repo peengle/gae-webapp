@@ -1,6 +1,8 @@
 # WEBAPP
 
-webapp application skeleton design for [Google App Engine](https://cloud.google.com/appengine/) environment.
+@discontinued
+
+webapp application skeleton design for [Google App Engine](https://cloud.google.com/appengine/docs/the-appengine-environments) standard environment.
 
 The skeleton project is proposing structure that can be use to serve: 
 - website,
@@ -8,7 +10,7 @@ The skeleton project is proposing structure that can be use to serve:
 - admin/cms
 - or all of them at once from single project. 
 
-It has been created as playground for [spiner](https://github.com/romannowicki/spiner) project.
+It has been created as playground for [spiner](https://github.com/peengle/spiner) project.
 
 To create new webapp just clone this repository open Makefile and change 
 `APP_ID`, `SDK_PATH` to your own and run:
