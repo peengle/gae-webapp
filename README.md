@@ -14,7 +14,7 @@ To create new webapp just clone this repository open Makefile and change
 `APP_ID`, `SDK_PATH` to your own and run:
 
 ```
-$ git clone git@github.com:romannowicki/gae-webapp.git <newproject>
+$ git clone git@github.com:peengle/gae-webapp.git <newproject>
 $ cd <newproject>
 $ ./bin/init-new-project
 ```
